@@ -242,20 +242,8 @@ function startSearch() {
   }
 }
   </script>
-  <h1>NaoDevGames By Wisnu</h1>
+  <h1>NaoPlay By Wisnu</h1>
     <div id="search">
-    
-  <div>
-  <section>
-   <div class="blueContainer">
-<h3><span>New Games</span></h3>
-<div id="5new" class="f-newest">
-<div id="5newHolder" class='fiveGrid'></div>
-</div>
-
-</div>
-  </section>
-</div>
   
   <div class="flex-container">
 	<section>
@@ -264,30 +252,24 @@ function startSearch() {
   <a href="Others"class="game-link container">	
   <div class="game-tile">	
   <img class="game-icon" src="other.png" alt="Others" loading="lazy">
-  <h1 class="game-title">Tools</h1> 	
+  <h1 class="game-title">Other Fiture</h1> 	
   </div>
   </a>
   
   <a href="privacyPolicy.html"class="game-link container">	
   <div class="game-tile">	
     <img class="game-icon" src="privacypolicy.png" alt="Suggestions" loading="lazy">
-  <h1 class="game-title">Author</h1> 	
+  <h1 class="game-title">About Wisnu</h1> 	
   </div>
   </a>
   
-  <a href="javascript:" onclick="randomGame(this);" class="game-link container">	
-  <div class="game-tile">	
-    <img class="game-icon" src="random.png" alt="Suggestions" loading="lazy">
-  <h1 class="game-title">Random Game</h1> 	
-  </div>
-  </a>
-  
+ 
 </div>
   </section>
    </div>  
 
     <div>
-<label for="searchQuery">Cari Games:</label>
+<label for="searchQuery">Search Games:</label>
     <input type="search" id="searchQuery" onload="startSearch()" onkeyup="startSearch()" title="Search" autocomplete='off'>
   </div>
 
@@ -506,25 +488,8 @@ document.getElementById('5newHolder').appendChild(gCNewest);
 
 var g = [
 {
-n : 'The Mountain Game',
-sn : 'mountain',
-m : 'mountainNoFade.png',
-d : 'idle clicker',
- },
-{
 n : '2048',
 d : 'puzzle',
- },
-{
-n : 'Tetris',
-d : 'puzzle',
- },
-{
-n : 'Geometry Dash 1 & 2',
-sn : 'dashHome',
-m : 'geometry-dash.png',
-d : 'jumping run',
-f : 'dash'
  },
 {
 n : 'Flood Runner',
@@ -532,58 +497,13 @@ sn : 'floodRunner',
 m : 'flood-runner.png',
  },
 {
-n : 'Car Games',
-sn : 'cargame',
-m : 'cargame.jpg',
- },
-{
-n : 'World\'s Hardest Game',
-sn : 'WorldsHardestGame',
-m : 'worlds-hardest-game.png',
- },
-{
-n : '1 on 1 Soccer',
-sn : '1v1Soccer',
-m : '1-on-1-soccer.png',
-d : 'sports',
- },
-{
-n : 'Chess',
-d : 'board',
- },
-{
-n : 'Snake',
-d : 'google',
- },
-{
 n : 'Cookie Clicker',
 sn : 'cookie',
- },
-{
-n : 'Madalin Stunt Cars 2',
-sn : 'StuntCars',
-m : 'madalin-stunt-cars-2.jpeg',
-d : 'cars'
- },
-{
-n : 'Pillow Battle',
-sn : 'pillowbattle',
-m : 'pillowbattle.jpg',
  },
 {
 n : 'Tunnel Rush',
 sn : 'Tunnel-Rush',
 m : 'tunnelrush.png',
- },
-{
-n : 'Google Baseball',
-sn : 'Google-Baseball',
-m : 'google-baseball.png',
- },
-{
-n : 'Big Tower Tiny Square',
-sn : 'BigTowerTinySquare',
-m : 'TinySquare.png',
  },
 {
 n : 'Basketball Stars',
@@ -596,10 +516,6 @@ n : 'Just Flip',
   {
 n : 'Launchball',
  },
-  {
-n : 'Paper.io 2',
-sn : 'paperio2',
- },
    {
 n : 'Air Hockey',
  },
@@ -611,128 +527,23 @@ n : 'The Oregon Trail',
 sn : 'theoregontrial',
  },
   {
-n : 'Mountain Maze',
- },
-  {
 n : 'Stack',
  },
   {
 n : 'Rolling Forests',
 sn : 'forests',
  },
-  {
-n : 'Run 3',
- },
-  {
-n : 'Snowball Fight',
- },
-  {
-n : 'Raft Wars 1 & 2',
-sn : 'raftwarshome',
-m : 'raftwars.png',
- },
-   {
-n : 'Game Inside A Game',
- },
-   {
-n : 'There Is No Game',
- },
-  {
-n : 'Economical 1 & 2',
-sn : 'economicalhome',
-m : 'economical.png',
- },
-   {
-n : 'Cat Ninja',
- },
-   {
-   /*/Typo is on purpose /*/
-n : 'Celseste',
-sn : 'celeste',
- },
-   {
-n : 'Edge Not Found',
- },
-   {
-n : 'Cubefield',
- },
    {
 n : 'Radius Raid',
- },
-   {
-n : 'Papery Planes',
  },
    {
 n : 'Swerve',
  },
    {
-n : 'Grey Box Testing',
- },
-   {
-n : 'Tanuki Sunset',
- },
-   {
-n : 'Ninja VS Evilcorp',
- },
-   {
-n : 'Evil Glitch',
- },
-   {
-n : 'Basket Random',
- },
-   {
-n : 'Johnny Upgrade',
- },
-   {
-n : 'Crossy Road',
- },
-   {
-n : 'Circle O',
- },
-   {
-n : 'Mario',
- },
-   {
-n : 'Ovo',
- },
-   {
-n : 'Tank Trouble',
- },
-   {
-n : 'Soccer Random',
- },
-   {
-n : 'Stickman Hook',
- },
-   {
-n : 'Volley Random',
- },
-   {
-n : 'Bitlife',
- },
-   {
 n : 'Awesome Tanks',
  },
    {
-n : 'Offline Paradise',
- },
-   {
 n : 'Drive Mad',
- },
-   {
-n : 'Elastic Man',
- },
-   {
-n : 'Just One Boss',
- },
-   {
-n : 'Its Raining Boxes',
- },
-   {
-n : 'Spacebar Clicker',
- },
-   {
-n : 'Impossible Quiz',
  },
 ];
 displayGames();
