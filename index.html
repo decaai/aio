@@ -34,36 +34,14 @@ body {
     scrollbar-width: none;
 }
 
-/* Neon Button */
-.whiteButton {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: flex;
-}
-
-.whitebutton {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    font-size: 0.25em;
-    color: #00ff00;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-}
-
-.whitebutton:hover {
-    color: #ff00ff;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
-}
-
 /* Container */
 .blueContainer {
     background-color: #191919;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    padding: 20px;
+    margin: 20px;
 }
 
 /* Newest Section */
@@ -73,13 +51,18 @@ body {
     overflow-x: scroll;
     background-color: #292929;
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
 /* Grid Layout */
 .fiveGrid {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
 }
 
 /* Game Tiles */
@@ -87,9 +70,11 @@ body {
     background-color: #292929;
     height: 200px;
     width: 150px;
-    border-radius: 30px;
-    transition: transform 0.2s;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    padding: 10px;
+    margin: 10px auto;
 }
 
 .game-tile:hover {
@@ -108,10 +93,11 @@ body {
 
 /* Game Title */
 .game-title {
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     color: #00ffff;
     text-shadow: 0 0 5px #00ffff;
+    margin-top: 10px;
 }
 
 .game-title:hover {
@@ -119,39 +105,69 @@ body {
     color: #ff00ff;
 }
 
-/* Flex Container */
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    order: 0;
-    flex-grow: 0;
-    flex-wrap: wrap;
-}
-
 /* Search Query */
 #searchQuery {
     width: calc(50% + 100px);
     border: 3px solid #292929;
     border-radius: 10px;
-    margin: 10px;
-    padding: 5px;
+    margin: 10px auto;
+    padding: 10px;
     background-color: #383838;
     color: #fff;
     box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    display: block;
 }
 
 /* Heading */
 h2 {
     width: 100%;
-    margin: 10px 0 20px;
+    margin: 20px 0;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.2em;
     color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    text-shadow: 0 0 15px #00ffff;
 }
 
-h2 span {
-    padding: 0 10px;
+/* Cyberpunk Button */
+.cyber-button {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    margin: 10px;
+}
+
+.cyber-button:hover {
+    background: linear-gradient(90deg, #00ff00, #ff00ff);
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    transform: scale(1.1);
+}
+
+/* Close Button */
+.close {
+    font-size: 30px;
+    background-color: #323232;
+    color: white;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.close:hover {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
 }
 
 /* Chat */
@@ -161,85 +177,45 @@ h2 span {
     padding: 12px 24px;
     color: #f5f5f5;
     text-shadow: 0 0 5px #00ff00;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 /* Nice Button */
 .niceButton {
-    background-color: #393939;
-    border: 1px solid white;
-    color: #eee;
-    padding: 10px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    border: none;
+    color: #000;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 50px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+    transition: 0.3s ease-in-out;
+    margin: 10px;
 }
 
 .niceButton:hover {
-    background-color: #00ff00;
-    color: #1d1d1d;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00ff00;
+    background: linear-gradient(45deg, #ff00ff, #00ff00);
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    transform: scale(1.1);
 }
 
-/* Close Button */
-.close {
-    font-size: 30px;
-    background-color: #323232;
-    color: white;
-    border: 1px solid white;
-    margin: 5px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-/* Dark Mode Adjustments */
-@media (prefers-color-scheme: dark) {
-    body {
-        color: #eee;
-        background: #121212;
-    }
-
-    body a {
-        color: #809fff;
-    }
-
-    .game-tile {
-        background-color: #292929;
-    }
-
-    .whitebutton {
-        color: #eee;
-    }
-
-    .blueContainer {
-        background-color: #191919;
-    }
-
-    .chat {
-        background-color: #383838;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fiveGrid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #searchQuery {
-        color: #eee;
-        background-color: #383838;
-        border: 3px solid #292929;
+        width: 90%;
     }
+}
 
-    img {
-        filter: brightness(.9) contrast(1);
-    }
-
-    .close {
-        background-color: #323232;
-        color: white;
-        border: 1px solid white;
-        font-weight: bold;
-    }
-
-    .niceButton {
-        border: 1px solid white;
-        color: #eee;
-        background-color: #393939;
+@media (max-width: 480px) {
+    .fiveGrid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
   </style>
