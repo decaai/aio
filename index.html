@@ -10,212 +10,230 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-/* Global Styles */
+/* Background dengan efek Cyberpunk */
 body {
-    background-image: url('backk.jpg');
+    background-image: url(backk.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: #f5f5f5;
-    font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; /* Font Cyberpunk */
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
 }
 
-/* Hide scrollbar */
+/* Hilangkan Scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
 
 body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
 }
 
-/* Container */
+/* Tombol di Pojok */
+.whiteButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+}
+
+.whitebutton {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+    font-size: 0.25em;
+    color: #00ffff;
+}
+
+/* Kontainer Warna Neon */
 .blueContainer {
-    background-color: #191919;
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Newest Section */
-.f-newest {
-    border-radius: 5px;
-    text-align: center;
-    overflow-x: scroll;
-    background-color: #292929;
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 90%;
+    padding: 10px;
 }
 
-/* Grid Layout */
+/* Grid Layout - 4x4 */
 .fiveGrid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    gap: 10px;
     text-align: center;
-    padding: 20px;
-}
-
-/* Game Tiles */
-.game-tile {
-    background-color: #292929;
-    height: 200px;
-    width: 150px;
-    border-radius: 20px;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
     padding: 10px;
-    margin: 10px auto;
-}
-
-.game-tile:hover {
-    transform: scale(1.1);
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-}
-
-/* Game Icon */
-.game-icon {
-    border-radius: 15px;
-    width: 150px;
-    height: 150px;
-}
-
-/* Game Title */
-.game-title {
-    font-size: 16px;
-    text-align: center;
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff;
-    margin-top: 10px;
-}
-
-.game-title:hover {
-    font-size: 18px;
-    color: #ff00ff;
-}
-
-/* Search Query */
-#searchQuery {
-    width: calc(50% + 100px);
-    border: 3px solid #292929;
-    border-radius: 10px;
-    margin: 10px auto;
-    padding: 10px;
-    background-color: #383838;
-    color: #fff;
-    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    display: block;
-}
-
-/* Heading */
-h2 {
-    width: 100%;
-    margin: 20px 0;
-    text-align: center;
-    font-size: 2.2em;
-    color: #00ffff;
-    text-shadow: 0 0 15px #00ffff;
-}
-
-/* Cyberpunk Button */
-.cyber-button {
-    background: linear-gradient(90deg, #ff00ff, #00ffff);
-    color: #000;
-    border: none;
-    padding: 12px 30px;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 2px;
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-    margin: 10px;
-}
-
-.cyber-button:hover {
-    background: linear-gradient(90deg, #00ff00, #ff00ff);
-    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-    transform: scale(1.1);
-}
-
-/* Close Button */
-.close {
-    font-size: 30px;
-    background-color: #323232;
-    color: white;
-    border: 1px solid white;
-    margin: 10px;
-    border-radius: 50px;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-}
-
-.close:hover {
-    background-color: #ff0000;
-    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
-}
-
-/* Chat */
-.chat {
-    background-color: #383838;
-    font-size: 16px;
-    padding: 12px 24px;
-    color: #f5f5f5;
-    text-shadow: 0 0 5px #00ff00;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-/* Nice Button */
-.niceButton {
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
-    border: none;
-    color: #000;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-family: 'Orbitron', sans-serif;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
-    transition: 0.3s ease-in-out;
-    margin: 10px;
-}
-
-.niceButton:hover {
-    background: linear-gradient(45deg, #ff00ff, #00ff00);
-    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-    transform: scale(1.1);
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .fiveGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .fiveGrid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    #searchQuery {
-        width: 50%;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .fiveGrid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Search Box - Tata Letak Kembali Seperti Semula */
+#searchQuery {
+    width: calc(50% + 100px);
+    border: 3px solid #00ffff;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px;
+    display: block;
+    background-color: black;
+    color: #00ffff;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Game Tiles - Ukuran Dikecilkan */
+.game-tile {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 160px;
+    width: 120px;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+.game-tile:hover {
+    transform: scale(1.05);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+}
+
+/* Game Icon - Ukuran Dikecilkan */
+.game-icon {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Game Title */
+.game-title {
+    font-size: 12px;
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+    margin-top: 5px;
+}
+
+.game-title:hover {
+    font-size: 14px;
+    color: #ff00ff;
+}
+
+/* Chat Button */
+.chat {
+    background-color: #000;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transition: 0.3s;
+}
+
+.chat:hover {
+    background-color: #00ffff;
+    color: black;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+
+/* Nice Button */
+.niceButton {
+    background-color: black;
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.niceButton:hover {
+    background-color: #ff00ff;
+    color: black;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    font-weight: bold;
+}
+
+/* Close Button */
+.close {
+    font-size: 20px;
+    background-color: black;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    padding: 5px 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.close:hover {
+    background-color: #00ffff;
+    color: black;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #00ffff;
+        background: #000;
+    }
+
+    body a {
+        color: #ff00ff;
+    }
+
+    .game-tile {
+        background-color: #111;
+    }
+
+    .whitebutton {
+        color: #00ffff;
+    }
+
+    .blueContainer {
+        background-color: #191919;
+    }
+
+    .chat {
+        background-color: #222;
+    }
+
+    #searchQuery {
+        color: #00ffff;
+        background-color: #222;
+        border: 3px solid #ff00ff;
+    }
+
+    .close {
+        background-color: #111;
+        color: #ff00ff;
+        border: 2px solid #ff00ff;
+    }
+
+    .niceButton {
+        border: 2px solid #ff00ff;
+        color: #ff00ff;
+        background-color: #111;
     }
 }
   </style>
