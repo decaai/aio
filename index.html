@@ -99,16 +99,24 @@ body {
     box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
 }
 
-/* Game Icon */
+/* Game Icon - Tambahkan Border Neon */
 .game-icon {
-    border-radius: 15px;
-    width: 150px;
-    height: 150px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #00ffff; /* Border Neon Cyan */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transition: 0.3s;
 }
-
+	  
+/*Hover Effect untuk Game Icon */
+.game-icon:hover {
+    border-color: #ff00ff; /* Border berubah jadi Magenta saat hover */
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+}
 /* Game Title */
 .game-title {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     color: #00ffff;
     text-shadow: 0 0 5px #00ffff;
