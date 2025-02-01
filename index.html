@@ -10,29 +10,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-/* Background dengan efek Cyberpunk */
+/* Global Styles */
 body {
-    background-image: url(backk.jpg);
+    background-image: url('backk.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Orbitron', sans-serif; /* Font Cyberpunk */
-    color: #00ffff;
-    text-shadow: 0 0 5px #00ffff;
+    color: #f5f5f5;
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Hilangkan Scrollbar */
+/* Hide scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
 
 body {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Tombol di Pojok */
+/* Neon Button */
 .whiteButton {
     position: absolute;
     top: 0px;
@@ -43,171 +45,170 @@ body {
 .whitebutton {
     background-color: transparent;
     border: none;
-    cursor: default;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
     font-size: 0.25em;
-    color: #00ffff;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
 }
 
-/* Kontainer Warna Neon */
+.whitebutton:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+}
+
+/* Container */
 .blueContainer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #191919;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-    padding: 10px;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
 }
 
-/* Grid Layout - 4x4 */
+/* Newest Section */
+.f-newest {
+    border-radius: 5px;
+    text-align: center;
+    overflow-x: scroll;
+    background-color: #292929;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* Grid Layout */
 .fiveGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
-    gap: 10px;
     text-align: center;
-    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .fiveGrid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .fiveGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .fiveGrid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* Search Box - Tata Letak Kembali Seperti Semula */
-#searchQuery {
-    width: calc(50% + 100px);
-    border: 3px solid #00ffff;
-    border-radius: 10px;
-    margin: 10px auto;
-    padding: 5px;
-    display: block;
-    background-color: black;
-    color: #00ffff;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* Game Tiles - Ukuran Dikecilkan */
+/* Game Tiles */
 .game-tile {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 160px;
-    width: 120px;
-    border-radius: 15px;
-    transition: transform 0.2s ease-in-out;
+    background-color: #292929;
+    height: 200px;
+    width: 150px;
+    border-radius: 30px;
+    transition: transform 0.2s;
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-    padding: 5px;
-    margin: 5px auto;
 }
 
 .game-tile:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
 }
 
-/* Game Icon - Ukuran Dikecilkan */
+/* Game Icon */
 .game-icon {
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
 }
 
 /* Game Title */
 .game-title {
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     color: #00ffff;
     text-shadow: 0 0 5px #00ffff;
-    margin-top: 5px;
 }
 
 .game-title:hover {
-    font-size: 14px;
+    font-size: 18px;
     color: #ff00ff;
 }
 
-/* Chat Button */
-.chat {
-    background-color: #000;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: 2px solid #00ffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    transition: 0.3s;
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    flex-grow: 0;
+    flex-wrap: wrap;
 }
 
-.chat:hover {
-    background-color: #00ffff;
-    color: black;
-    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+/* Search Query */
+#searchQuery {
+    width: calc(50% + 100px);
+    border: 3px solid #292929;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #383838;
+    color: #fff;
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* Heading */
+h2 {
+    width: 100%;
+    margin: 10px 0 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+h2 span {
+    padding: 0 10px;
+}
+
+/* Chat */
+.chat {
+    background-color: #383838;
+    font-size: 16px;
+    padding: 12px 24px;
+    color: #f5f5f5;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 /* Nice Button */
 .niceButton {
-    background-color: black;
-    border: 2px solid #ff00ff;
-    color: #ff00ff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    background-color: #393939;
+    border: 1px solid white;
+    color: #eee;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .niceButton:hover {
-    background-color: #ff00ff;
-    color: black;
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    background-color: #00ff00;
+    color: #1d1d1d;
     font-weight: bold;
+    text-shadow: 0 0 10px #00ff00;
 }
 
 /* Close Button */
 .close {
-    font-size: 20px;
-    background-color: black;
-    color: #00ffff;
-    border: 2px solid #00ffff;
-    padding: 5px 15px;
+    font-size: 30px;
+    background-color: #323232;
+    color: white;
+    border: 1px solid white;
+    margin: 5px;
     border-radius: 50px;
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    cursor: pointer;
 }
 
-.close:hover {
-    background-color: #00ffff;
-    color: black;
-    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
-}
-
-/* Dark Mode */
+/* Dark Mode Adjustments */
 @media (prefers-color-scheme: dark) {
     body {
-        color: #00ffff;
-        background: #000;
+        color: #eee;
+        background: #121212;
     }
 
     body a {
-        color: #ff00ff;
+        color: #809fff;
     }
 
     .game-tile {
-        background-color: #111;
+        background-color: #292929;
     }
 
     .whitebutton {
-        color: #00ffff;
+        color: #eee;
     }
 
     .blueContainer {
@@ -215,25 +216,30 @@ body {
     }
 
     .chat {
-        background-color: #222;
+        background-color: #383838;
     }
 
     #searchQuery {
-        color: #00ffff;
-        background-color: #222;
-        border: 3px solid #ff00ff;
+        color: #eee;
+        background-color: #383838;
+        border: 3px solid #292929;
+    }
+
+    img {
+        filter: brightness(.9) contrast(1);
     }
 
     .close {
-        background-color: #111;
-        color: #ff00ff;
-        border: 2px solid #ff00ff;
+        background-color: #323232;
+        color: white;
+        border: 1px solid white;
+        font-weight: bold;
     }
 
     .niceButton {
-        border: 2px solid #ff00ff;
-        color: #ff00ff;
-        background-color: #111;
+        border: 1px solid white;
+        color: #eee;
+        background-color: #393939;
     }
 }
   </style>
